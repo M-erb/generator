@@ -16,6 +16,11 @@
       <label>how many SKUs?</label>
       <input type="number" ng-model="genCount" placeholder="ex. 30" />
     </div>
+    <div class="me_input me_input_style">
+      <label>Starting Number - default is 0</label>
+      <input type="number" ng-model="genStarNum" placeholder="ex. 0 or 1" />
+    </div>
+
     <div class="me_input submit">
       <button class="submit_btn" type="submit" ng-hide="genPushed">
         <span>Generate</span>
@@ -24,15 +29,20 @@
         <span>Add to end</span>
       </button>
     </div>
+
   </form>
-  <button ng-click="clearGen()" ng-show="genPushed">Clear</button>
+
+  <button class="btn" ng-click="clearConfig()" ng-show="genPushed">Clear Settings Only</button>
 
   <div>
     <p>Configuration: {{genConfig}}</p>
     <p>Count: {{genConfig.genCount}}</p>
   </div>
 
-  <h2>Your SKUs</h2>
+  <div class="list_title_w-btn">
+    <h2>Your SKUs</h2>
+    <button class="btn" ng-click="clearGen()" ng-show="genPushed">Clear List Only</button>
+  </div>
   <div class="gen_results" ng-repeat="item in sku">
     <span>{{item}}</span>
   </div>

@@ -7,7 +7,7 @@ skuApp.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', '$lo
     .state('directory', {
       url: '/',
       templateUrl: 'views/sku.html',
-      controller: 'genCtrl'
+      controller: 'SKUgenCtrl'
     });
 
 

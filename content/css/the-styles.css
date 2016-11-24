@@ -1,8 +1,15 @@
 @import "https://fonts.googleapis.com/css?family=Raleway:100,300";
 @import "https://fonts.googleapis.com/css?family=Poiret+One";
 @import "https://fonts.googleapis.com/css?family=Open+Sans";
-/*----SOLID BACKGROUNDS----*/
+@import "https://fonts.googleapis.com/css?family=Raleway:100,300";
+@import "https://fonts.googleapis.com/css?family=Poiret+One";
+@import "https://fonts.googleapis.com/css?family=Open+Sans";
 @import url(animate.css);
+.theme, .me_input input, .me_input textarea, .me_input_style label, body {
+  background: #9d69a3;
+  color: #f5fbef; }
+
+/*----SOLID BACKGROUNDS----*/
 .white_solid {
   background-color: white;
   color: #303442; }
@@ -54,8 +61,63 @@
   background: rgba(71, 175, 194, 0.8);
   color: #fff; }
 
-/*==========BUTTONS==========*/
-.btn {
+.theme, .me_input input, .me_input textarea, .me_input_style label, body {
+  background: #9d69a3;
+  color: #f5fbef; }
+
+/*----SOLID BACKGROUNDS----*/
+.white_solid {
+  background-color: white;
+  color: #303442; }
+
+.lightgray_solid {
+  background-color: #f6f6f7;
+  background-color: whitesmoke;
+  color: #303442; }
+
+.gray_solid {
+  background-color: #e8ebee;
+  background-color: #e8ebee;
+  color: #303442; }
+
+.darkgray_solid {
+  background-color: #6f6f6f;
+  color: #303442; }
+
+.orange_solid {
+  background: #ff9610;
+  background-color: #ff9610;
+  color: #fff; }
+
+.green_solid {
+  background: #79be37;
+  background-color: #79be37;
+  color: #fff; }
+
+.blue_solid {
+  background: #00baf7;
+  background-color: #42baf7;
+  color: #fff; }
+
+.purple_solid {
+  background: #8464CA;
+  background-color: #8464ca;
+  color: #fff; }
+
+/*----FADED BACKGROUNDS----*/
+.gray_fade {
+  background-color: rgba(89, 89, 89, 0.5);
+  color: #fff; }
+
+.orange_fade {
+  background: rgba(245, 95, 65, 0.8);
+  color: #fff; }
+
+.blue_fade {
+  background: rgba(71, 175, 194, 0.8);
+  color: #fff; }
+
+.btn, .btn_white, .btn_blue, .btn_green {
   font-size: 0.8em;
   font-weight: bold;
   cursor: pointer;
@@ -67,58 +129,29 @@
   display: inline-block;
   transition: all .2s;
   white-space: nowrap;
-  box-shadow: 1px 1px 3px rgba(41, 41, 41, 0.5);
+  background: #e1e1e1;
+  color: #505050;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none; }
-
-.btn:hover {
-  box-shadow: 6px 6px 3px rgba(41, 41, 41, 0.4); }
+  .btn:hover, .btn_white:hover, .btn_blue:hover, .btn_green:hover {
+    box-shadow: 6px 6px 3px rgba(41, 41, 41, 0.4); }
 
 .btn_white {
   color: #302B2C;
   background: white; }
-
-.btn_white:hover {
-  color: #302B2C;
-  background: white; }
-
-.btn_alt_white {
-  box-shadow: none;
-  box-shadow: 0;
-  border: 2px solid white;
-  color: #fff;
-  background: transparent;
-  transition: all .3s; }
-
-.btn_alt_white:hover {
-  color: #79be37;
-  background: white; }
-
-.btn_darkgray {
-  border: 1px solid #2D2D30;
-  color: white;
-  background: #2D2D30; }
-
-.btn_darkgray:hover {
-  color: white; }
-
-.btn_orange {
-  color: white;
-  background-color: #ff9610; }
-
-.btn_orange:hover {
-  color: white;
-  background: #ff6410; }
+  .btn_white:hover {
+    color: #302B2C;
+    background: white; }
 
 .btn_blue {
   color: white;
-  background: #42baf7; }
+  background: blue; }
 
-.btn_blue:hover {
+.btn_green {
   color: white;
-  background: #42baff; }
+  background: green; }
 
 /*---==forms==---*/
 .me_input {
@@ -130,8 +163,7 @@
   border-radius: 3px; }
 
 .me_input input, .me_input textarea {
-  background: #fff;
-  border: 1px solid #bdc3c7;
+  border: 1px solid #f5fbef;
   margin: 0 0 15px 0;
   display: block;
   width: 100%;
@@ -146,8 +178,34 @@
 
 .me_input input:focus, .me_input textarea:focus {
   outline: none;
-  border: 1px solid rgba(52, 152, 219, 0.5);
-  box-shadow: 0 0 5px #2980b9; }
+  border: 1px solid rgba(52, 152, 219, 0.5); }
+
+/*submit*/
+.me_input [type=submit] {
+  border: 0px;
+  border: none;
+  background: #e1e1e1;
+  color: #505050;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all .5s;
+  padding: 10px 20px; }
+
+.me_input [type=submit]:hover {
+  outline: none;
+  box-shadow: 0 0 4px #2980b9; }
+
+/*lable styles*/
+.me_input_style {
+  position: relative;
+  margin-top: 1.5em; }
+
+.me_input_style label {
+  position: absolute;
+  top: -10px;
+  left: 20px;
+  padding: 0 0.5em;
+  line-height: 1; }
 
 /*-drop downs-*/
 .me-dropdown-group {
@@ -261,33 +319,6 @@ option .option_note {
 .me_checkbox input[type=checkbox]:checked + label::after {
   opacity: 1; }
 
-/*submit*/
-.me_input [type=submit] {
-  border: 0px;
-  border: none;
-  color: #505050;
-  font-weight: 700;
-  cursor: pointer;
-  transition: all .5s;
-  padding: 10px 20px; }
-
-.me_input [type=submit]:hover {
-  outline: none;
-  box-shadow: 0 0 4px #2980b9; }
-
-/*lable styles*/
-.me_input_style {
-  position: relative;
-  margin-top: 1.5em; }
-
-.me_input_style label {
-  position: absolute;
-  top: -10px;
-  left: 20px;
-  background: #fff;
-  padding: 0 0.5em;
-  line-height: 1; }
-
 .submit {
   position: relative;
   height: 100px; }
@@ -297,6 +328,25 @@ option .option_note {
 
 .genPushed {
   position: absolute; }
+
+.list_title_w-btn {
+  display: flex;
+  justify-content: flex-start; }
+  .list_title_w-btn button {
+    margin: 0 2em;
+    align-self: baseline; }
+
+.gen_results {
+  transition: 1s linear all;
+  -webkit-transition: 1s linear all; }
+  .gen_results .ng-enter {
+    opacity: 0; }
+  .gen_results .ng-enter.ng-enter-active {
+    opacity: 1; }
+  .gen_results .ng-leave {
+    opacity: 1; }
+  .gen_results .ng-leave.ng-leave-active {
+    opacity: 0; }
 
 /* Check mark*/
 .mark {
@@ -439,12 +489,9 @@ body {
   line-height: 1;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
-  position: relative;
   margin: 0;
   padding: 0;
-  background-color: #fff;
   font-family: 'open sans', lato, sans-serif;
-  color: #303442;
   width: 100%;
   min-height: 80vh;
   position: relative;

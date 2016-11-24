@@ -1,4 +1,4 @@
-/*==========BUTTONS==========*/
+@import 'var';
 .btn {
   font-size: 0.8em;
   font-weight: bold;
@@ -11,64 +11,39 @@
   display: inline-block;
   transition: all .2s;
   white-space: nowrap;
-  box-shadow: 1px 1px 3px rgba(41,41,41,0.5);
+  //box-shadow: 1px 1px 3px rgba(41,41,41,0.5);
+  background: $light_gray;
+  color: $dark_gray;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-}
-  .btn:hover {
+  &:hover {
       box-shadow: 6px 6px 3px rgba(41,41,41,0.4);
   }
+}
 
 .btn_white {
+  @extend .btn;
+  color: #302B2C;
+  background: white;
+  &:hover {
     color: #302B2C;
     background: white;
-}
-  .btn_white:hover {
-      color: #302B2C;
-      background: white;
   }
-
-.btn_alt_white {
-  box-shadow: none;
-  box-shadow: 0;
-  border: 2px solid white;
-  color: #fff;
-  background: transparent;
-  transition: all .3s;
 }
-  .btn_alt_white:hover {
-    color: #79be37;
-    background: white;
-  }
-
-.btn_darkgray {
-  border: 1px solid #2D2D30;
-  color: white;
-  background: #2D2D30;
-}
-  .btn_darkgray:hover {
-    color: white;
-  }
-
-.btn_orange {
-  color: white;
-  background-color: rgba(255,150,16,1);
-}
-  .btn_orange:hover {
-    color: white;
-    background: rgba(255,100,16,1);
-  }
 
 .btn_blue {
+  @extend .btn;
   color: white;
-  background: rgba(66,186,247,1);
+  background: blue;
 }
-  .btn_blue:hover {
-    color: white;
-    background: rgba(66,186,255,1);
-  }
+
+.btn_green {
+  @extend .btn;
+  color: white;
+  background: green;
+}
 
 /*---==forms==---*/
 .me_input {
@@ -81,14 +56,15 @@
 }
 
 .me_input input, .me_input textarea {
-  background: #fff;
-  border: 1px solid #bdc3c7;
+  //border: 1px solid #bdc3c7;
+  border: 1px solid $off_white;
   margin: 0 0 15px 0;
   display: block;
   width: 100%;
   height: auto;
   transition: all .5s;
   font-size: 18px;
+  @extend .theme;
 }
 
 .me_input textarea {
@@ -100,8 +76,42 @@
 .me_input input:focus, .me_input textarea:focus {
   outline: none;
   border: 1px solid rgba(52,152,219,.5);
-  box-shadow: 0 0 5px #2980b9;
+  //box-shadow: 0 0 5px #2980b9;
 }
+
+/*submit*/
+.me_input [type=submit] {
+  border: 0px;
+  border: none;
+  background: $light_gray;
+  color: $dark_gray;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all .5s;
+  padding: 10px 20px;
+}
+.me_input [type=submit]:hover {
+  outline: none;
+  box-shadow: 0 0 4px #2980b9;
+}
+
+/*lable styles*/
+.me_input_style {
+  position: relative;
+  margin-top: 1.5em;
+}
+
+.me_input_style label {
+  position: absolute;
+  top: -10px;
+  left: 20px;
+  //background: #fff;
+  padding: 0 0.5em;
+  line-height: 1;
+  @extend .theme;
+}
+
+
 /*-drop downs-*/
 .me-dropdown-group {
   position: relative;
@@ -215,34 +225,4 @@ option .option_note {
 }
 .me_checkbox input[type=checkbox]:checked + label::after {
   opacity: 1;
-}
-
-/*submit*/
-.me_input [type=submit] {
-  border: 0px;
-  border: none;
-  color: rgba(80,80,80,1);
-  font-weight: 700;
-  cursor: pointer;
-  transition: all .5s;
-  padding: 10px 20px;
-}
-.me_input [type=submit]:hover {
-  outline: none;
-  box-shadow: 0 0 4px #2980b9;
-}
-
-/*lable styles*/
-.me_input_style {
-  position: relative;
-  margin-top: 1.5em;
-}
-
-.me_input_style label {
-  position: absolute;
-  top: -10px;
-  left: 20px;
-  background: #fff;
-  padding: 0 0.5em;
-  line-height: 1;
 }

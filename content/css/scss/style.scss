@@ -74,16 +74,16 @@ body {
   line-height: 1;
 	-webkit-font-smoothing: antialiased;
   overflow-x: hidden;
-	position: relative;
   margin: 0;
   padding: 0;
-  background-color: #fff;
   font-family: 'open sans', lato, sans-serif;
-  color: #303442;
 	width: 100%;
 	min-height: 80vh;
 	position: relative;
 	z-index: 1;
+	//background-color: #fff;
+  //color: #303442;
+	@extend .theme;
 }
 /*-structure*/
 header {

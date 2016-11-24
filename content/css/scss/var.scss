@@ -3,10 +3,18 @@
 @import 'https://fonts.googleapis.com/css?family=Open+Sans';
 
 $green: rgba(64, 249, 155, 1);
-$d_gray: rgba(97, 112, 125, 1);
+$gray: rgba(97, 112, 125, 1);
 $purple: rgba(157, 105, 163, 1);
 $off_white: rgba(245, 251, 239, 1);
 $red: rgba(232, 93, 117, 1);
+
+$light_gray: rgba(225,225,225,1);
+$dark_gray: rgba(80,80,80,1);
+
+.theme {
+  background: $purple;
+  color: $off_white;
+}
 
 
 /*----SOLID BACKGROUNDS----*/
