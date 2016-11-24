@@ -49,6 +49,9 @@
 .me_input {
   position: relative;
 }
+.me_input input:focus .me_input label {
+  color: $green;
+}
 .me_input input, [type=submit], .me_input textarea {
   font-family: lato, sans-serif;
   padding: 10px;
@@ -57,7 +60,7 @@
 
 .me_input input, .me_input textarea {
   //border: 1px solid #bdc3c7;
-  border: 1px solid $off_white;
+  border: 2px solid $off_white;
   margin: 0 0 15px 0;
   display: block;
   width: 100%;
@@ -75,7 +78,7 @@
 
 .me_input input:focus, .me_input textarea:focus {
   outline: none;
-  border: 1px solid rgba(52,152,219,.5);
+  border-color: $green;
   //box-shadow: 0 0 5px #2980b9;
 }
 

@@ -6,8 +6,8 @@ skuApp.controller('SKUgenCtrl', ['$scope', '$cookies', '$localStorage', '$sessio
   //$scope.pageClass = 'directory';
 
   //filling data
-  $scope.frontLetters = 'ABC'
-  $scope.backLetters = 'Q'
+  $scope.frontLetters = 'SKU'
+  $scope.backLetters = ''
   $scope.genCount = 30
   $scope.genStarNum = 0
 
@@ -26,7 +26,8 @@ skuApp.controller('SKUgenCtrl', ['$scope', '$cookies', '$localStorage', '$sessio
     //clear form
     /*$scope.frontLetters = ''
     $scope.backLetters = ''
-    $scope.genCount = ''*/
+    $scope.genCount = ''
+    $scope.genStarNum = 0*/
 
     //put together SKUs
     for(var i=$scope.genConfig.genStarNum; i < $scope.genConfig.genCount + $scope.genConfig.genStarNum; i++) {
@@ -38,6 +39,7 @@ skuApp.controller('SKUgenCtrl', ['$scope', '$cookies', '$localStorage', '$sessio
           return n > 99 ? "" + n: "0" + n;
         }
       }
+
       $scope.sku.push($scope.genConfig.frontLetters + numFormat(i) + $scope.genConfig.backLetters)
     }
   }

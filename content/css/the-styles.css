@@ -6,7 +6,7 @@
 @import "https://fonts.googleapis.com/css?family=Open+Sans";
 @import url(animate.css);
 .theme, .me_input input, .me_input textarea, .me_input_style label, body {
-  background: #9d69a3;
+  background: #61707d;
   color: #f5fbef; }
 
 /*----SOLID BACKGROUNDS----*/
@@ -62,7 +62,7 @@
   color: #fff; }
 
 .theme, .me_input input, .me_input textarea, .me_input_style label, body {
-  background: #9d69a3;
+  background: #61707d;
   color: #f5fbef; }
 
 /*----SOLID BACKGROUNDS----*/
@@ -157,13 +157,16 @@
 .me_input {
   position: relative; }
 
+.me_input input:focus .me_input label {
+  color: #40f99b; }
+
 .me_input input, [type=submit], .me_input textarea {
   font-family: lato, sans-serif;
   padding: 10px;
   border-radius: 3px; }
 
 .me_input input, .me_input textarea {
-  border: 1px solid #f5fbef;
+  border: 2px solid #f5fbef;
   margin: 0 0 15px 0;
   display: block;
   width: 100%;
@@ -178,7 +181,7 @@
 
 .me_input input:focus, .me_input textarea:focus {
   outline: none;
-  border: 1px solid rgba(52, 152, 219, 0.5); }
+  border-color: #40f99b; }
 
 /*submit*/
 .me_input [type=submit] {

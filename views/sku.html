@@ -20,6 +20,10 @@
       <label>Starting Number - default is 0</label>
       <input type="number" ng-model="genStarNum" placeholder="ex. 0 or 1" />
     </div>
+    <div class="me_input me_input_style">
+      <label>Digits - default is 3</label>
+      <input type="number" ng-model="genStarNum" placeholder="ex. 1 or 3" />
+    </div>
 
     <div class="me_input submit">
       <button class="submit_btn" type="submit" ng-hide="genPushed">
@@ -36,7 +40,7 @@
 
   <div>
     <p>Configuration: {{genConfig}}</p>
-    <p>Count: {{genConfig.genCount}}</p>
+    <p>Count: {{sku.length}}</p>
   </div>
 
   <div class="list_title_w-btn">
