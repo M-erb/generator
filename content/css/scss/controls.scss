@@ -11,7 +11,7 @@
   display: inline-block;
   transition: all .2s;
   white-space: nowrap;
-  //box-shadow: 1px 1px 3px rgba(41,41,41,0.5);
+  box-shadow: 1px 1px 3px rgba(41,41,41,0.5);
   background: $light_gray;
   color: $dark_gray;
   -webkit-user-select: none;
@@ -33,23 +33,36 @@
   }
 }
 
-.btn_blue {
+.btn_red {
   @extend .btn;
-  color: white;
-  background: blue;
+  color: $off_white;
+  background: $red;
 }
 
 .btn_green {
   @extend .btn;
-  color: white;
+  color: $dark_gray;
   background: $green;
+}
+
+.btn_gray {
+  @extend .btn;
+  color: $dark_gray;
+  background: $light_gray;
+}
+
+.btn_purple {
+  @extend .btn;
+  color: $off_white;
+  background: $purple;
 }
 
 /*---==forms==---*/
 .me_input {
   position: relative;
+  margin-top: 1.5em;
 }
-.me_input input:focus .me_input label {
+.me_input input:focus .me_input {
   color: $green;
 }
 .me_input input, [type=submit], .me_input textarea {
@@ -61,13 +74,12 @@
 .me_input input, .me_input textarea {
   //border: 1px solid #bdc3c7;
   border: 2px solid $off_white;
-  margin: 0 0 15px 0;
   display: block;
   width: 100%;
   height: auto;
   transition: all .5s;
   font-size: 18px;
-  @extend .theme;
+  @extend .form_theme;
 }
 
 .me_input textarea {
@@ -86,32 +98,94 @@
 .me_input [type=submit] {
   border: 0px;
   border: none;
-  background: $light_gray;
   color: $dark_gray;
   font-weight: 700;
   cursor: pointer;
-  transition: all .5s;
+  transition: all .2s;
   padding: 10px 20px;
 }
 .me_input [type=submit]:hover {
   outline: none;
-  box-shadow: 0 0 4px #2980b9;
+}
+
+.dynamic_submit_btn {
+  position: relative;
+  box-shadow: 1px 1px 3px rgba(41,41,41,0.5);
+  &:hover {
+      box-shadow: 6px 6px 3px rgba(41,41,41,0.4);
+  }
+  span {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    outline: none;
+  }
+  span.placeholder {
+    position: static;
+    visibility: hidden;
+  }
 }
 
 /*lable styles*/
 .me_input_style {
   position: relative;
-  margin-top: 1.5em;
 }
 
 .me_input_style label {
   position: absolute;
   top: -10px;
   left: 20px;
-  //background: #fff;
-  padding: 0 0.5em;
+  padding: 0 10px;
   line-height: 1;
-  @extend .theme;
+  @extend .form_theme;
+}
+.me_input:first-child {
+    margin-top: 0;
+}
+
+/*custom controls */
+.num_btn_input_wrap {
+  display: inline-block;
+  margin-top: 1em;
+  label {
+    @extend .form_theme;
+    margin: 0 0 0.5em 30px;
+    display: block;
+  }
+}
+.num_btn_input {
+  display: flex;
+  width: 168px;
+  height: 50px;
+  flex-direction: row;
+  position: relative;
+  border: 2px solid $off_white;
+  border-radius: 3px;
+  div {
+    flex: 1 1 10px;
+    background: $off_white;
+    color: $dark_gray;
+    transition: all 0.2s;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    &:hover {
+      background: lighten($green, 14%);
+      color: $gray;
+    }
+    span {
+      align-self: center;
+    }
+  }
+  div.active_digit {
+    background: $green;
+    color: $gray;
+  }
 }
 
 
@@ -164,21 +238,23 @@ option .option_note {
 }
 
 /*place holder style*/
+$placeSize: 0.8em;
+$placeColr: rgba(220,220,220,0.4);
 .me_input input::-webkit-input-placeholder {
-  color: $light_gray;
-  font-size: 18px;
+  color: $placeColr;
+  font-size: $placeSize;
 }
 .me_input input::-moz-placeholder {
-  color: $light_gray;
-  font-size: 18px;
+  color: $placeColr;
+  font-size: $placeSize;
 }
 .me_input input:-ms-input-placeholder {
-  color: $light_gray;
-  font-size: 18px;
+  color: $placeColr;
+  font-size: $placeSize;
 }
 .me_input input:-moz-placeholder {
-  color: $light_gray;
-  font-size: 18px;
+  color: $placeColr;
+  font-size: $placeSize;
 }
 
 /* .me_checkbox */

@@ -1,21 +1,28 @@
-.gen_controls_wrap {
+@import 'var';
 
-}
-
-.submit {
-  position: relative;
-  height: 100px;
-}
-.submit_btn {
-  position: absolute;
-}
-.genPushed {
-  position: absolute;
+.card_container {
+  display: flex;
+  flex-wrap: wrap;
+  .gen_controls_card {
+    margin: 2em;
+    width: 224px;
+    padding: 30px 24px;
+    align-self: flex-start;
+    @extend .form_theme;
+  }
+  .sku_list_wrap {
+    margin: 2em;
+    padding: 30px 24px;
+    @extend .form_theme;
+  }
 }
 
 .list_title_w-btn {
   display: flex;
   justify-content: flex-start;
+  h2 {
+    margin-bottom: 0.3em;
+  }
   button {
     margin: 0 2em;
     align-self: baseline;
@@ -26,18 +33,6 @@
 .gen_results {
   transition: 1s linear all;
   -webkit-transition: 1s linear all;
-  .ng-enter {
-    opacity: 0;
-  }
-  .ng-enter.ng-enter-active {
-    opacity: 1;
-  }
-  .ng-leave {
-    opacity: 1;
-  }
-  .ng-leave.ng-leave-active {
-    opacity: 0;
-  }
 }
 
 
