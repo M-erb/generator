@@ -10,6 +10,7 @@ skuApp.controller('SKUgenCtrl', ['$scope', '$cookies', '$localStorage', '$sessio
   $scope.backLetters = ''
   $scope.genCount = 30
   $scope.genStarNum = 0
+  $scope.gendigits = 3
 
   $scope.genConfig = {}
   $scope.sku = []
@@ -27,7 +28,8 @@ skuApp.controller('SKUgenCtrl', ['$scope', '$cookies', '$localStorage', '$sessio
     /*$scope.frontLetters = ''
     $scope.backLetters = ''
     $scope.genCount = ''
-    $scope.genStarNum = 0*/
+    $scope.genStarNum = 0
+    $scope.gendigits = 3*/
 
     //put together SKUs
     for(var i=$scope.genConfig.genStarNum; i < $scope.genConfig.genCount + $scope.genConfig.genStarNum; i++) {

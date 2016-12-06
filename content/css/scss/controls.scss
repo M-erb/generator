@@ -42,7 +42,7 @@
 .btn_green {
   @extend .btn;
   color: white;
-  background: green;
+  background: $green;
 }
 
 /*---==forms==---*/
@@ -165,19 +165,19 @@ option .option_note {
 
 /*place holder style*/
 .me_input input::-webkit-input-placeholder {
-  color: rgba(80,80,80,.5);
+  color: $light_gray;
   font-size: 18px;
 }
 .me_input input::-moz-placeholder {
-  color: rgba(80,80,80,.5);
+  color: $light_gray;
   font-size: 18px;
 }
 .me_input input:-ms-input-placeholder {
-  color: rgba(80,80,80,.5);
+  color: $light_gray;
   font-size: 18px;
 }
 .me_input input:-moz-placeholder {
-  color: rgba(80,80,80,.5);
+  color: $light_gray;
   font-size: 18px;
 }
 
