@@ -9,8 +9,8 @@
 @import "https://fonts.googleapis.com/css?family=Open+Sans";
 @import url(animate.css);
 .theme, body {
-  background: #9d69a3;
-  color: #f5fbef; }
+  background: #f5fbef;
+  color: #e85d75; }
 
 .form_theme, .me_input input, .me_input textarea, .me_input_style label, .num_btn_input_wrap label, .card_container .gen_controls_card, .card_container .sku_list_wrap {
   background: #61707d;
@@ -21,8 +21,8 @@
   color: #61707d; }
 
 .theme, body {
-  background: #9d69a3;
-  color: #f5fbef; }
+  background: #f5fbef;
+  color: #e85d75; }
 
 .form_theme, .me_input input, .me_input textarea, .me_input_style label, .num_btn_input_wrap label, .card_container .gen_controls_card, .card_container .sku_list_wrap {
   background: #61707d;
@@ -299,8 +299,8 @@ option .option_note {
   opacity: 1; }
 
 .theme, body {
-  background: #9d69a3;
-  color: #f5fbef; }
+  background: #f5fbef;
+  color: #e85d75; }
 
 .form_theme, .me_input input, .me_input textarea, .me_input_style label, .num_btn_input_wrap label, .card_container .gen_controls_card, .card_container .sku_list_wrap {
   background: #61707d;
