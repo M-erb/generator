@@ -1,4 +1,4 @@
-skuApp.factory('directory',['$localStorage', function($localStorage){
+genApp.factory('directory',['$localStorage', function($localStorage){
   var directoryCheck = function() {
     //house keeping for local storage
     if ($localStorage.directory == null) {

@@ -1,6 +1,6 @@
-var skuApp = angular.module('skuApp', ['ngAnimate','ui.router','ngclipboard','headroom','checklist-model','ngCookies','ngStorage']);
+var genApp = angular.module('genApp', ['ngAnimate','ui.router','ngclipboard','headroom','checklist-model','ngCookies','ngStorage']);
 
-skuApp.controller('SKUgenCtrl', ['$scope', '$cookies', '$localStorage', '$sessionStorage', function($scope, $cookies, $localStorage, $sessionStorage){
+genApp.controller('NumgenCtrl', ['$scope', '$cookies', '$localStorage', '$sessionStorage', function($scope, $cookies, $localStorage, $sessionStorage){
 
   $scope.storage = $localStorage;
   //$scope.pageClass = 'directory';
@@ -9,7 +9,7 @@ skuApp.controller('SKUgenCtrl', ['$scope', '$cookies', '$localStorage', '$sessio
   $scope.genPushed = true
 
   //filling data
-  $scope.frontLetters = 'SKU'
+  $scope.frontLetters = 'ABC'
   $scope.backLetters = ''
   $scope.genCount = 30
   $scope.genStarNum = 0
@@ -25,7 +25,7 @@ skuApp.controller('SKUgenCtrl', ['$scope', '$cookies', '$localStorage', '$sessio
   }
 
   $scope.genConfig = {}
-  $scope.sku = []
+  $scope.num = []
   $scope.submit = function() {
     //setup config
     $scope.genConfig.frontLetters = $scope.frontLetters
@@ -44,7 +44,7 @@ skuApp.controller('SKUgenCtrl', ['$scope', '$cookies', '$localStorage', '$sessio
     $scope.genStarNum = 0
     $scope.gendigits = 3*/
 
-    //put together SKUs
+    //put together nums
     for(var i=$scope.genConfig.genStarNum; i < $scope.genConfig.genCount + $scope.genConfig.genStarNum; i++) {
       var numFormat = function(n) {
         // adds zeros before the numbers as needed
@@ -80,12 +80,12 @@ skuApp.controller('SKUgenCtrl', ['$scope', '$cookies', '$localStorage', '$sessio
         }
       }
 
-      $scope.sku.push($scope.genConfig.frontLetters + numFormat(i) + $scope.genConfig.backLetters)
+      $scope.num.push($scope.genConfig.frontLetters + numFormat(i) + $scope.genConfig.backLetters)
     }
   }
 
   $scope.clearGen = function() {
-    $scope.sku = []
+    $scope.num = []
     $scope.genPushed = false
   }
 

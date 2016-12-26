@@ -1,0 +1,65 @@
+<div class="page_wrap">
+  <header>
+    <h3>Your personal Number generator</h3>
+  </header>
+
+  <div class="card_container">
+    <div class="gen_controls_card">
+      <form ng-submit="submit()" class="gen_controls_wrap">
+        <div class="me_input me_input_style">
+          <label>letters in front</label>
+          <input type="text" ng-model="frontLetters" placeholder="ex. ABC"/>
+        </div>
+        <div class="me_input me_input_style">
+          <label>letters in back</label>
+          <input type="text" ng-model="backLetters" placeholder="ex. ABC" />
+        </div>
+        <div class="me_input me_input_style">
+          <label>how many Nums?</label>
+          <input type="number" ng-model="genCount" ng-change="numCheck()" placeholder="ex. 30" />
+        </div>
+        <div class="me_input me_input_style">
+          <label>Starting Num</label>
+          <input type="number" ng-model="genStarNum" ng-change="numCheck()" placeholder="ex. 0 or 1" />
+        </div>
+        <div class="num_btn_input_wrap">
+          <label>Digits</label>
+          <div class="num_btn_input">
+            <div ng-class="{'active_digit' : gendigits == 1}" ng-click="gendigits = 1">
+              <span>1</span>
+            </div>
+            <div ng-class="{'active_digit' : gendigits == 2}" ng-click="gendigits = 2">
+              <span>2</span>
+            </div>
+            <div ng-class="{'active_digit' : gendigits == 3}" ng-click="gendigits = 3">
+              <span>3</span>
+            </div>
+            <div ng-class="{'active_digit' : gendigits == 4}" ng-click="gendigits = 4">
+              <span>4</span>
+            </div>
+          </div>
+        </div>
+        <div class="me_input">
+          <button class="dynamic_submit_btn btn_green" type="submit">
+            <span class="placeholder">Add to end</span>
+            <span ng-hide="genPushed">Generate</span>
+            <span ng-show="genPushed">Add to end</span>
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <div class="sku_list_wrap">
+      <div class="list_title_w-btn">
+        <h2>Your Numberss</h2>
+        <button class="btn_green" ng-click="clearGen()">Clear list</button>
+      </div>
+      <div>
+        <p>Count: {{num.length}}</p>
+      </div>
+      <div class="gen_results" ng-show="genPushed" ng-repeat="item in num track by $index">
+        <span>{{item}}</span>
+      </div>
+    </div>
+  </div>
+</div>
